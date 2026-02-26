@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/cercle-slider.css">
+    <link rel="stylesheet" href="../src/styles/libraries/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../src/styles/libraries/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../src/scripts/libraries/fancybox-master/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../src/scripts/libraries/fancybox-master/dist/jquery.fancybox.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-section">
+            <div class="header-section__container">
+                <div class="header-section__container__top container">
+                    <a href="/"><img class="header-logo lozad" src="../src/assets/img/logo.png" alt=""></a>
+
+                    <div class="header-section__container__info-block">
+                        <form class="form form_search-form" action="" id="">
+                            <input class="input input_search" type="text" name="search" id="" placeholder="Поиск">
+                            <button type="submit" class="input_search_svg" aria-label="Поиск"></button>
+                        </form>
+                        <div class="header-content">
+                            <div class="header-contact">
+                                <div class="header-contact__phone">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem"
+                                        viewBox="0 0 20 21" fill="none">
+                                        <path
+                                            d="M18.3332 14.6V17.1C18.3341 17.3321 18.2866 17.5618 18.1936 17.7745C18.1006 17.9871 17.9643 18.178 17.7933 18.3349C17.6222 18.4918 17.4203 18.6112 17.2005 18.6856C16.9806 18.7599 16.7477 18.7876 16.5165 18.7667C13.9522 18.488 11.489 17.6118 9.32486 16.2083C7.31139 14.9289 5.60431 13.2218 4.32486 11.2083C2.91651 9.03434 2.04007 6.55916 1.76653 3.98334C1.7457 3.75289 1.77309 3.52064 1.84695 3.30136C1.9208 3.08208 2.03951 2.88058 2.1955 2.70969C2.3515 2.5388 2.54137 2.40226 2.75302 2.30877C2.96468 2.21528 3.19348 2.16689 3.42486 2.16667H5.92486C6.32928 2.16269 6.72136 2.3059 7.028 2.56961C7.33464 2.83332 7.53493 3.19954 7.59153 3.6C7.69705 4.40006 7.89274 5.18561 8.17486 5.94167C8.28698 6.23994 8.31125 6.5641 8.24478 6.87574C8.17832 7.18737 8.02392 7.47343 7.79986 7.7L6.74153 8.75833C7.92783 10.8446 9.65524 12.572 11.7415 13.7583L12.7999 12.7C13.0264 12.4759 13.3125 12.3215 13.6241 12.2551C13.9358 12.1886 14.2599 12.2129 14.5582 12.325C15.3143 12.6071 16.0998 12.8028 16.8999 12.9083C17.3047 12.9654 17.6744 13.1693 17.9386 13.4812C18.2029 13.7932 18.3433 14.1913 18.3332 14.6Z"
+                                            stroke="#E87817" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <a href="tel:+73472925977">+7 347 292-59-77</a>
+                                </div>
+                                <div class="header-contact__operating">
+                                    <span>пн–пт 8:00 — 17:00</span>
+                                </div>
+                            </div>
+
+                            <div class="header-mail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem"
+                                    viewBox="0 0 20 21" fill="none">
+                                    <path
+                                        d="M18.3327 6.33334L10.8577 11.0833C10.6004 11.2445 10.3029 11.33 9.99935 11.33C9.69575 11.33 9.39829 11.2445 9.14102 11.0833L1.66602 6.33334M3.33268 3.83334H16.666C17.5865 3.83334 18.3327 4.57953 18.3327 5.5V15.5C18.3327 16.4205 17.5865 17.1667 16.666 17.1667H3.33268C2.41221 17.1667 1.66602 16.4205 1.66602 15.5V5.5C1.66602 4.57953 2.41221 3.83334 3.33268 3.83334Z"
+                                        stroke="#E87817" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <a href="mailto:mail@burservice.ru">mail@burservice.ru</a>
+                            </div>
+                            <div class="header-language">
+                                <span class="header-language__rus active">РУC</span>
+                                <span class="header-language__line"></span>
+                                <span class="header-language__eng">ENG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-section__container__mobile">
+                        <div class="header-mobileMenu">
+                            <button class="search-mobile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none">
+                                    <path
+                                        d="M28 28L22.2667 22.2667M25.3333 14.6667C25.3333 20.5577 20.5577 25.3333 14.6667 25.3333C8.77563 25.3333 4 20.5577 4 14.6667C4 8.77563 8.77563 4 14.6667 4C20.5577 4 25.3333 8.77563 25.3333 14.6667Z"
+                                        stroke="#1F1917" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <!-- Бургер-кнопка -->
+                            <button class="header-burger" id="burgerToggle" aria-label="Меню">
+                                <div class="burger-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <form class="form form_search-form-mobile container" action="" id="">
+                    <input class="input input_search" type="text" name="search" id="" placeholder="Поиск">
+                    <button type="submit" class="input_search_svg" aria-label="Поиск"></button>
+                </form>
+            </div>
+
+            <!-- Десктопная версия меню -->
+            <nav class="main-nav --white">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item has-submenu">
+                        <div class="submenu-toggle">
+                            <a class="submenu-toggle__link" href="#">Решения</a>
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M4 6.50406L10 13L16 6.50406" stroke="#1F1917" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Бурение скважин</a></li>
+                                <li><a href="#">Ремонт скважин</a></li>
+                                <li><a href="#">ННБ</a></li>
+                                <li><a href="#">Заканчивание</a></li>
+                                <li><a href="#">IPM (Комплексные решения)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="main-nav__item has-submenu">
+                        <div class="submenu-toggle">
+                            <a class="submenu-toggle__link" href="#">Услуги</a>
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M4 6.50406L10 13L16 6.50406" stroke="#1F1917" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Бурение скважин</a></li>
+                                <li><a href="#">Ремонт скважин</a></li>
+                                <li><a href="#">ННБ</a></li>
+                                <li><a href="#">Заканчивание</a></li>
+                                <li><a href="#">IPM (Комплексные решения)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="main-nav__item">
+                        <a class="submenu-toggle__link" href="#">О компании</a>
+                    </li>
+
+                    <li class="main-nav__item">
+                        <a class="submenu-toggle__link bold" href="#">Работа в Бурсервис</a>
+                    </li>
+
+                    <li class="main-nav__item">
+                        <a class="submenu-toggle__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Мобильное меню -->
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-menu-nav">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item has-submenu">
+                            <div class="submenu-toggle">
+                                <a class="submenu-toggle__link" href="#">Решения</a>
+                                <span class="arrow">
+                                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="1.25rem"
+                                        height="1.25rem" viewBox="0 0 20 20" fill="none">
+                                        <path d="M4 6.50406L10 13L16 6.50406" stroke="#1F1917" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="submenu">
+                                <li><a class="submenu__link" href="#">Бурение скважин</a></li>
+                                <li><a class="submenu__link" href="#">Ремонт скважин</a></li>
+                                <li><a class="submenu__link" href="#">Отбор керна</a></li>
+                                <li><a class="submenu__link" href="#">ННБ</a></li>
+                                <li><a class="submenu__link" href="#">Заканчивание</a></li>
+                                <li><a class="submenu__link" href="#">IPM (Комплексные решения)</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="mobile-menu__item"><a class="submenu-toggle__link" href="#">Услуги</a></li>
+                        <li class="mobile-menu__item"><a class="submenu-toggle__link" href="#">О компании</a></li>
+                        <li class="mobile-menu__item"><a class="submenu-toggle__link" href="#">Работа в Бурсервис</a>
+                        </li>
+                        <li class="mobile-menu__item"><a class="submenu-toggle__link" href="#">Контакты</a></li>
+
+                    </ul>
+
+                </nav>
+                <div class="header-content container">
+                    <div class="header-contact">
+                        <div class="header-contact__phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 20 21"
+                                fill="none">
+                                <path
+                                    d="M18.3332 14.6V17.1C18.3341 17.3321 18.2866 17.5618 18.1936 17.7745C18.1006 17.9871 17.9643 18.178 17.7933 18.3349C17.6222 18.4918 17.4203 18.6112 17.2005 18.6856C16.9806 18.7599 16.7477 18.7876 16.5165 18.7667C13.9522 18.488 11.489 17.6118 9.32486 16.2083C7.31139 14.9289 5.60431 13.2218 4.32486 11.2083C2.91651 9.03434 2.04007 6.55916 1.76653 3.98334C1.7457 3.75289 1.77309 3.52064 1.84695 3.30136C1.9208 3.08208 2.03951 2.88058 2.1955 2.70969C2.3515 2.5388 2.54137 2.40226 2.75302 2.30877C2.96468 2.21528 3.19348 2.16689 3.42486 2.16667H5.92486C6.32928 2.16269 6.72136 2.3059 7.028 2.56961C7.33464 2.83332 7.53493 3.19954 7.59153 3.6C7.69705 4.40006 7.89274 5.18561 8.17486 5.94167C8.28698 6.23994 8.31125 6.5641 8.24478 6.87574C8.17832 7.18737 8.02392 7.47343 7.79986 7.7L6.74153 8.75833C7.92783 10.8446 9.65524 12.572 11.7415 13.7583L12.7999 12.7C13.0264 12.4759 13.3125 12.3215 13.6241 12.2551C13.9358 12.1886 14.2599 12.2129 14.5582 12.325C15.3143 12.6071 16.0998 12.8028 16.8999 12.9083C17.3047 12.9654 17.6744 13.1693 17.9386 13.4812C18.2029 13.7932 18.3433 14.1913 18.3332 14.6Z"
+                                    stroke="#E87817" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <a href="tel:+73472925977">+7 347 292-59-77</a>
+                        </div>
+                        <div class="header-contact__operating">
+                            <span>пн–пт 8:00 — 17:00</span>
+                        </div>
+                    </div>
+
+                    <div class="header-mail container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 20 21"
+                            fill="none">
+                            <path
+                                d="M18.3327 6.33334L10.8577 11.0833C10.6004 11.2445 10.3029 11.33 9.99935 11.33C9.69575 11.33 9.39829 11.2445 9.14102 11.0833L1.66602 6.33334M3.33268 3.83334H16.666C17.5865 3.83334 18.3327 4.57953 18.3327 5.5V15.5C18.3327 16.4205 17.5865 17.1667 16.666 17.1667H3.33268C2.41221 17.1667 1.66602 16.4205 1.66602 15.5V5.5C1.66602 4.57953 2.41221 3.83334 3.33268 3.83334Z"
+                                stroke="#E87817" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <a href="mailto:mail@burservice.ru">mail@burservice.ru</a>
+                    </div>
+                    <div class="header-language">
+                        <span class="header-language__rus active">РУC</span>
+                        <span class="header-language__line"></span>
+                        <span class="header-language__eng">ENG</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="full-width shadow-fon">
+            <!-- Слайдер только для картинок -->
+            <div class="swiper topBlock-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture class="card-block__picture production-img">
+                            <source srcset="../src/assets/img/standarts.webp" media="(max-width: 768px)">
+                            <img class="lozad" src="../src/assets/img/standarts.webp" alt="Картинка 1">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="card-block__picture production-img">
+                            <source srcset="../src/assets/img/service1.webp" media="(max-width: 768px)">
+                            <img class="lozad" src="../src/assets/img/service1.webp" alt="Картинка 2">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="card-block__picture production-img">
+                            <source srcset="../src/assets/img/production-fon.webp" media="(max-width: 768px)">
+                            <img class="lozad" src="../src/assets/img/production-fon.webp" alt="Картинка 3">
+                        </picture>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="titleText container">
+                Стандарты качества
+            </div>
+        </div>
+
+
+        <div class="breadcrumbs">
+            <a class="breadcrumbs__link" href="#">Главная</a>
+            <span class="breadcrumbs__separator breadcrumbs__separator--last"></span>
+            <a class="breadcrumbs__link" href="#">О компании</a>
+        </div>
+
+        <section>
+            <div class="about-section">
+                <div class="about-section__container">
+                    <div class="mirror-title">
+                        <div class="mirror-title__text" data-text="о нас">о нас</div>
+                    </div>
+                    <div class="about-section__container__info-block">
+                        <div class="top-block">
+                            <div class="top-block-desc">
+                                ГК Бурсервис предлагает комплексные решения для нефтяной и газовой промышленности.
+                                20 лет мы разрабатываем и производим оборудование, а также оказываем инженерные услуги
+                                и технологическую поддержку как российским, так и международным компаниям, занимающимся
+                                добычей нефти и газа.
+                            </div>
+                            <picture class="card-block__picture top-block-pic">
+                                <!-- Мобильная версия -->
+                                <source srcset="../src/assets/img/about1.jpg" media="(max-width: 768px)">
+                                <!-- Десктопная версия  -->
+                                <img class="lozad" src="../src/assets/img/about1.jpg" alt="Картинка">
+                            </picture>
+                        </div>
+                        <div class="about-mission">
+                            <div class="title">наша миссия</div>
+                            <div class="big-text">
+                                Создавать прогрессивные технологии с заботой о будущих поколениях
+                            </div>
+                        </div>
+                        <div class="about-worth">
+                            <div class="title">наша миссия</div>
+                            <div class="about-worth__info-block">
+                                <div class="about-worth__info-block__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem"
+                                        viewBox="0 0 32 32" fill="none">
+                                        <path
+                                            d="M21.3327 28V25.3333C21.3327 23.9188 20.7708 22.5623 19.7706 21.5621C18.7704 20.5619 17.4138 20 15.9993 20H7.99935C6.58486 20 5.22831 20.5619 4.22811 21.5621C3.22792 22.5623 2.66602 23.9188 2.66602 25.3333V28M21.3327 4.17067C22.4764 4.46716 23.4892 5.13502 24.2123 6.06942C24.9353 7.00381 25.3276 8.15185 25.3276 9.33333C25.3276 10.5148 24.9353 11.6629 24.2123 12.5973C23.4892 13.5316 22.4764 14.1995 21.3327 14.496M29.3327 28V25.3333C29.3318 24.1516 28.9385 23.0037 28.2145 22.0698C27.4905 21.1358 26.4769 20.4688 25.3327 20.1733M17.3327 9.33333C17.3327 12.2789 14.9449 14.6667 11.9993 14.6667C9.05383 14.6667 6.66602 12.2789 6.66602 9.33333C6.66602 6.38781 9.05383 4 11.9993 4C14.9449 4 17.3327 6.38781 17.3327 9.33333Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="about-worth__info-block__item-text">Люди</span>
+                                </div>
+                                <div class="about-worth__info-block__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <path
+                                            d="M13.3327 19.5466V21.7146C13.3276 22.1715 13.2053 22.6193 12.9775 23.0153C12.7496 23.4113 12.4238 23.7421 12.0313 23.976C11.1982 24.593 10.5205 25.3959 10.052 26.3208C9.58352 27.2458 9.33723 28.2672 9.33268 29.304M18.666 19.5466V21.7146C18.6711 22.1715 18.7934 22.6193 19.0212 23.0153C19.2491 23.4113 19.5749 23.7421 19.9673 23.976C20.8005 24.593 21.4782 25.3959 21.9467 26.3208C22.4152 27.2458 22.6615 28.2672 22.666 29.304M23.9993 12H25.9993C26.8834 12 27.7312 11.6488 28.3564 11.0236C28.9815 10.3985 29.3327 9.55068 29.3327 8.66663C29.3327 7.78257 28.9815 6.93472 28.3564 6.3096C27.7312 5.68448 26.8834 5.33329 25.9993 5.33329H23.9993M23.9993 12C23.9993 14.1217 23.1565 16.1565 21.6562 17.6568C20.1559 19.1571 18.1211 20 15.9993 20C13.8776 20 11.8428 19.1571 10.3425 17.6568C8.8422 16.1565 7.99935 14.1217 7.99935 12M23.9993 12V3.99996C23.9993 3.64634 23.8589 3.3072 23.6088 3.05715C23.3588 2.8071 23.0196 2.66663 22.666 2.66663H9.33268C8.97906 2.66663 8.63992 2.8071 8.38987 3.05715C8.13982 3.3072 7.99935 3.64634 7.99935 3.99996V12M5.33268 29.3333H26.666M7.99935 12H5.99935C5.11529 12 4.26745 11.6488 3.64233 11.0236C3.01721 10.3985 2.66602 9.55068 2.66602 8.66663C2.66602 7.78257 3.01721 6.93472 3.64233 6.3096C4.26745 5.68448 5.11529 5.33329 5.99935 5.33329H7.99935"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="about-worth__info-block__item-text">Результат</span>
+                                </div>
+                                <div class="about-worth__info-block__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <path
+                                            d="M15.9993 21.3333V28M21.3327 18.6667V28M26.666 13.3333V28M29.3327 4L17.8047 15.528C17.7428 15.5901 17.6692 15.6393 17.5882 15.6729C17.5072 15.7066 17.4204 15.7239 17.3327 15.7239C17.245 15.7239 17.1582 15.7066 17.0772 15.6729C16.9962 15.6393 16.9226 15.5901 16.8607 15.528L12.4713 11.1387C12.3463 11.0137 12.1768 10.9435 12 10.9435C11.8232 10.9435 11.6537 11.0137 11.5287 11.1387L2.66602 20M5.33268 24V28M10.666 18.6667V28"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="about-worth__info-block__item-text">Развитие</span>
+                                </div>
+                                <div class="about-worth__info-block__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <path
+                                            d="M13.3327 13.3334V6.66671C13.3327 6.31309 13.4732 5.97395 13.7232 5.7239C13.9733 5.47385 14.3124 5.33337 14.666 5.33337H17.3327C17.6863 5.33337 18.0254 5.47385 18.2755 5.7239C18.5255 5.97395 18.666 6.31309 18.666 6.66671V13.3334M18.666 8.00004C20.7877 8.00004 22.8226 8.8429 24.3229 10.3432C25.8232 11.8435 26.666 13.8783 26.666 16V20M5.33268 20V16C5.33268 13.8783 6.17554 11.8435 7.67583 10.3432C9.17612 8.8429 11.2109 8.00004 13.3327 8.00004M3.99935 20H27.9993C28.7357 20 29.3327 20.597 29.3327 21.3334V24C29.3327 24.7364 28.7357 25.3334 27.9993 25.3334H3.99935C3.26297 25.3334 2.66602 24.7364 2.66602 24V21.3334C2.66602 20.597 3.26297 20 3.99935 20Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="about-worth__info-block__item-text">Безопасность</span>
+                                </div>
+                                <div class="about-worth__info-block__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <path
+                                            d="M23.9993 12H26.666C27.3733 12 28.0515 12.2809 28.5516 12.781C29.0517 13.2811 29.3327 13.9594 29.3327 14.6666V29.3333L23.9993 24H15.9993C15.2921 24 14.6138 23.719 14.1137 23.2189C13.6136 22.7188 13.3327 22.0405 13.3327 21.3333V20M18.666 12C18.666 12.7072 18.3851 13.3855 17.885 13.8856C17.3849 14.3857 16.7066 14.6666 15.9993 14.6666H7.99935L2.66602 20V5.33329C2.66602 4.62605 2.94697 3.94777 3.44706 3.44767C3.94716 2.94758 4.62544 2.66663 5.33268 2.66663H15.9993C16.7066 2.66663 17.3849 2.94758 17.885 3.44767C18.3851 3.94777 18.666 4.62605 18.666 5.33329V12Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="about-worth__info-block__item-text">Клиенты</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-section__container__info-block pt-5">
+                        <div class="top-block">
+                            <div class="top-block-desc">
+                                На сегодняшний день мы присутствуем в 15 странах мира, а также продолжаем развиваться
+                                на территории РФ, включая Западную и Восточную Сибирь, Поволжье, Урал, Дальний Восток.
+                                Среди наших ключевых Заказчиков крупнейшие отечественные нефтегазовые компании.
+                            </div>
+                            <picture class="card-block__picture top-block-pic">
+                                <!-- Мобильная версия -->
+                                <source srcset="../src/assets/img/map.jpg" media="(max-width: 768px)">
+                                <!-- Десктопная версия  -->
+                                <img class="lozad" src="../src/assets/img/map.jpg" alt="Картинка">
+                            </picture>
+                        </div>
+                        <div class="about-banner">
+                            <div class="about-banner-text">
+                                Мы реализуем программы развития направлений, в которых мы сильны, чтобы сохранить
+                                завоёванное лидерство в разработке, производстве оборудования, уровне сервиса и
+                                технической поддержки
+                            </div>
+                            <picture class="card-block__picture about-banner-pic">
+                                <!-- Мобильная версия -->
+                                <source srcset="../src/assets/img/product-card.webp" media="(max-width: 768px)">
+                                <!-- Десктопная версия  -->
+                                <img class="lozad" src="../src/assets/img/product-card.webp" alt="Картинка">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="about-section__container__info-block pt-5">
+                        <div class="about-target">
+                            <div class="title">наша цель</div>
+                            <div class="big-text">
+                                Бурсервис мировой лидер в нефтесервисе. Наше видение простирается далеко за горизонт
+                                нашей жизни
+                            </div>
+                        </div>
+                        <div class="target-block">
+                            <div class="target-block__top">
+                                <div class="target-block__top-text">
+                                    Мы стремимся обеспечить устойчивость нашей компании в изменяющихся экономических
+                                    условиях.
+                                </div>
+                                <p class="target-block__top-desc">Для этого мы не прекращаем развитие: развитие
+                                    устойчивых систем управления компанией, нашего персонала, предлагаемых нами
+                                    нефтесервисных услуг и технологий.</p>
+                            </div>
+                            <div class="target-block__grid">
+                                <div class="target-block__grid__item targetSpan-3">
+                                    <picture class=" target-block__grid__item-pic">
+                                        <!-- Мобильная версия -->
+                                        <source srcset="../src/assets/img/logo-grid-mob.png" media="(max-width: 768px)">
+                                        <!-- Десктопная версия  -->
+                                        <img class="lozad" src="../src/assets/img/logo-grid.png" alt="Картинка">
+                                    </picture>
+                                    <span class="target-block__grid__item-text">Предоставляет комплексные решения для
+                                        нефтяной и газовой промышленности.</span>
+                                </div>
+                                <div class="target-block__grid__item targetSpan-4">
+                                    <picture class=" target-block__grid__item-pic">
+                                        <!-- Мобильная версия -->
+                                        <source srcset="../src/assets/img/logo-grid-mob.png" media="(max-width: 768px)">
+                                        <!-- Десктопная версия  -->
+                                        <img class="lozad" src="../src/assets/img/logo-grid.png" alt="Картинка">
+                                    </picture>
+                                    <span class="target-block__grid__item-text">Предоставляет комплексные решения для
+                                        нефтяной и газовой промышленности.</span>
+                                </div>
+                                <div class="target-block__grid__item targetSpan-4">
+                                    <picture class=" target-block__grid__item-pic">
+                                        <!-- Мобильная версия -->
+                                        <source srcset="../src/assets/img/logo-grid-mob.png" media="(max-width: 768px)">
+                                        <!-- Десктопная версия  -->
+                                        <img class="lozad" src="../src/assets/img/logo-grid.png" alt="Картинка">
+                                    </picture>
+                                    <span class="target-block__grid__item-text">Предоставляет высокоэффективные решения
+                                        для разрушения горных пород при бурении. Разрабатывает и производит
+                                        оборудование, оказывает сервисные услуги и технологическую поддержку.</span>
+                                </div>
+                                <div class="target-block__grid__item targetSpan-3">
+                                    <picture class=" target-block__grid__item-pic">
+                                        <!-- Мобильная версия -->
+                                        <source srcset="../src/assets/img/logo-grid2-mob.png"
+                                            media="(max-width: 768px)">
+                                        <!-- Десктопная версия  -->
+                                        <img class="lozad" src="../src/assets/img/logo-grid2.png" alt="Картинка">
+                                    </picture>
+                                    <span class="target-block__grid__item-text">Обеспечивает полный спектр услуг
+                                        в области зарезки боковых стволов и капитального ремонта скважин.</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- блок с круговой анимацией -->
+        <section>
+            <div class="circle-slider pt-7-3 full-screen">
+                <div class="circle-slider__container ">
+                    <div class="mirror-title">
+                        <div class="mirror-title__text" data-text="История развития">История развития</div>
+                    </div>
+                    <div class="circle-slider__content">
+                        <div class="circle-slider__text">
+                        </div>
+                        <div class="circle-slider__body">
+
+                            <div class="circle-slider__el">
+                                <div class="circle-slider__visuals">
+                                    <div class="circle-slider__wheel">
+                                        <!-- Визуальные элементы будут созданы здесь с помощью JS -->
+                                    </div>
+                                </div>
+                                <div class="circle-slider__content-wrapper">
+                                    <!-- Текстовые блоки будут созданы здесь с помощью JS -->
+
+                                </div>
+                            </div>
+
+                            <ul id="circle-slider__data" style="display: none;">
+                                <li data-year="2008" data-image="/src/assets/img/main-slider.webp"
+                                    data-description="Основание компании и запуск первых проектов. Фокус на разработке инновационных решений для нефтегазовой отрасли.">
+                                </li>
+                                <li data-year="2009" data-image="/src/assets/img/main-slider1.webp"
+                                    data-description="Расширение портфеля услуг по инженерно-технологическому сопровождению бурения скважин: долотное сопровождение, отбор керна, бурение скважин с применением гидравлического забойного двигателя (ГЗД).">
+                                </li>
+                                <li data-year="2010" data-image="/src/assets/img/main-slider2.webp"
+                                    data-description="Открытие нового производственного цеха, оснащенного современным оборудованием, что позволило увеличить объемы производства в два раза.">
+                                </li>
+                                <li data-year="2011" data-image="/src/assets/img/main-slider.webp"
+                                    data-description="Получение международного сертификата качества ISO 9001 и выход на рынки стран СНГ. Заключены первые крупные экспортные контракты.">
+                                </li>
+                                <li data-year="2012" data-image="/src/assets/img/main-slider1.webp"
+                                    data-description="Внедрение цифровых технологий для мониторинга и управления производственными процессами. Создание собственного R&D центра.">
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="about-gallery">
+                <div class="about-gallery__container pt-7">
+                    <div class="mirror-title">
+                        <div class="mirror-title__text" data-text="галерея">галерея</div>
+                    </div>
+
+                    <div class="about-gallery__swiper product-right">
+                        <!-- основной слайдер -->
+                        <div class="swiper product-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture class="card-block__picture">
+                                        <source srcset="../src/assets/img/card1.webp" type="image/webp">
+                                        <img class="product-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="card-block__picture">
+                                        <source srcset="../src/assets/img/card2.webp" type="image/webp">
+                                        <img class="product-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="card-block__picture">
+                                        <source srcset="../src/assets/img/card1.webp" type="image/webp">
+                                        <img class="product-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="card-block__picture">
+                                        <source srcset="../src/assets/img/card2.webp" type="image/webp">
+                                        <img class="product-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="card-block__picture">
+                                        <source srcset="../src/assets/img/card1.webp" type="image/webp">
+                                        <img class="product-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                            </div>
+
+                            <!-- стрелки -->
+                            <div class="swiper-button-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="0.52431rem" height="1.04863rem"
+                                    viewBox="0 0 11 19" fill="none">
+                                    <path d="M1.58398 18.1513L9.97312 9.76219L1.58398 1.37305" stroke="#004230"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="0.52431rem" height="1.04863rem"
+                                    viewBox="0 0 11 19" fill="none">
+                                    <path d="M9.97312 18.1512L1.58398 9.76206L9.97312 1.37292" stroke="#004230"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- миниатюры -->
+                        <div class="swiper thumb-slider aboutThumb-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="../src/assets/img/card1.webp" type="image/webp">
+                                        <img class="thumb-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="../src/assets/img/card2.webp" type="image/webp">
+                                        <img class="thumb-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="../src/assets/img/card1.webp" type="image/webp">
+                                        <img class="thumb-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="../src/assets/img/card2.webp" type="image/webp">
+                                        <img class="thumb-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="../src/assets/img/card1.webp" type="image/webp">
+                                        <img class="thumb-slider__img lozad" src="../src/assets/img/card2.png"
+                                            alt="card2">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="active-indicator"></div>
+                        </div>
+
+                        <!-- Модалка галереи -->
+                        <div class="modal-gallery">
+                            <div class="modal-gallery__content">
+                                <div class="modal-gallery__content__swiper">
+                                    <div class="swiper about-swiper">
+                                        <div class="swiper-wrapper"></div>
+                                        <div class="swiper-button-next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24"
+                                                viewBox="0 0 14 24" fill="none">
+                                                <path d="M1.5 23L12.5 12L1.5 1" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="swiper-button-prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24"
+                                                viewBox="0 0 14 24" fill="none">
+                                                <path d="M12.5 23L1.5 12L12.5 1" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="swiper about-thumb-swiper">
+                                    <div class="swiper-wrapper"></div>
+                                    <div class="active-indicator"></div>
+                                </div>
+
+                                <button class="modal-close">✕</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Новости -->
+        <section>
+            <div class="news-section pt-7">
+                <div class="news-section__container">
+                    <div class="mirror-title">
+                        <div class="mirror-title__text" data-text="новости">новости</div>
+
+                    </div>
+                    <div class="news-section__container__info-block">
+                        <a class="card-news card-news_big" href="#">
+                            <picture class="card-block__picture card-news__img">
+                                <!-- Мобильная версия -->
+                                <source srcset="../src/assets/img/news1.webp" media="(max-width: 768px)">
+                                <!-- Десктопная версия  -->
+                                <img class="lozad" src="../src/assets/img/news1.webp" alt="Картинка">
+                            </picture>
+                            <div class="card-news__info-block">
+                                <span class="card-news__info-block-text">ГК «Бурсервис» приняла участие в бизнес-миссии
+                                    с делегацией
+                                    из Омана</span>
+                                <span class="card-news__info-block-date">16 апреля 2025</span>
+                            </div>
+                        </a>
+                        <div class="news-grid">
+                            <a href="#" class="card-news card-news_wide">
+                                <picture class="card-block__picture card-news__img">
+                                    <!-- Мобильная версия -->
+                                    <source srcset="../src/assets/img/news2.webp" media="(max-width: 768px)">
+                                    <!-- Десктопная версия  -->
+                                    <img class="lozad" src="../src/assets/img/news2.webp" alt="Картинка">
+                                </picture>
+                                <div class="card-news__info-block">
+                                    <span class="card-news__info-block-text">Промышленный туризм в действии! Группа
+                                        компаний «Бурсервис»
+                                        снова приняла долгожданных гостей!</span>
+                                    <span class="card-news__info-block-date">16 апреля 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" class="card-news card-news_basic">
+                                <picture class="card-block__picture card-news__img">
+                                    <!-- Мобильная версия -->
+                                    <source srcset="../src/assets/img/news3.webp" media="(max-width: 768px)">
+                                    <!-- Десктопная версия  -->
+                                    <img class="lozad" src="../src/assets/img/news3.webp" alt="Картинка">
+                                </picture>
+                                <div class="card-news__info-block">
+                                    <span class="card-news__info-block-text">Стройте свою карьеру
+                                        с ГК «Бурсервис»!</span>
+                                    <span class="card-news__info-block-date">16 апреля 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" class="card-news card-news_basic">
+                                <picture class="card-block__picture card-news__img">
+                                    <!-- Мобильная версия -->
+                                    <source srcset="../src/assets/img/news4.webp" media="(max-width: 768px)">
+                                    <!-- Десктопная версия  -->
+                                    <img class="lozad" src="../src/assets/img/news4.webp" alt="Картинка">
+                                </picture>
+                                <div class="card-news__info-block">
+                                    <span class="card-news__info-block-text">Рекордная МСП позволила сократить сроки
+                                        строите…</span>
+                                    <span class="card-news__info-block-date">16 апреля 2025</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма -->
+        <section>
+            <div class="form-section pt-7">
+                <div class="form-section__container">
+                    <img class="form-section__container__img lozad" src="../src/assets/img/form1.webp" alt="">
+                    <div class="form-section__container__top">
+                        <div class="form-section__container__top-title">Остались вопросы?</div>
+                        <div class="form-section__container__top__desc">
+                            <span>Будем рады помочь!</span>
+                            <span>Задайте любой интересующий вас вопрос, и наши специалисты свяжутся с вами в ближайшее
+                                время.</span>
+                        </div>
+                    </div>
+                    <form class="form form_default" action="">
+                        <div class="form__info-block">
+                            <div class="form__info-block__left">
+                                <label for="name">
+                                    <input class="input input_size_form" type="text" name="" id=""
+                                        placeholder="Ваше имя*">
+                                </label>
+                                <label for="email">
+                                    <input class="input input_size_form" type="email" name="" id=""
+                                        placeholder="Ваше Email*">
+                                </label>
+                                <label for="phone">
+                                    <input class="input input_size_form" type="text" name="phone" id=""
+                                        placeholder="Телефон*">
+                                </label>
+                                <label for="organization">
+                                    <input class="input input_size_form" type="text" name="" id=""
+                                        placeholder="Организация">
+                                </label>
+                            </div>
+                            <div class="form__info-block__right">
+                                <label for="question">
+                                    <textarea class="textarea textarea_size_form" name="" id=""
+                                        placeholder="Ваш вопрос"></textarea>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="consent" required />
+                                    <span class="policy-text">
+                                        Нажимая кнопку «Отправить», я даю своё согласие на обработку моих персональных
+                                        данных, в соответствии с Федеральным законом от 27.07.2006 года № 152-ФЗ
+                                        «О персональных данных». Политика в области обработки персональных данных.
+                                    </span>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__btn-block">
+                            <div class="form__btn-block__file">
+                                <!-- Кнопка для загрузки файла -->
+                                <label for="resumeFile" class="button button_size_file button_submit"
+                                    style="cursor: pointer;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem"
+                                        viewBox="0 0 24 25" fill="none">
+                                        <path d="M5 12.5H19M12 5.5V19.5" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>Резюме</span>
+                                </label>
+
+                                <button type="submit" class="button button_size_btn button_bg_orange button_submit">
+                                    <span>Отправить</span>
+                                    <svg width=".875rem" height=".875rem" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.51994 12.4801L12.4801 1.51999M12.4801 1.51999H2.5806M12.4801 1.51999V11.4195"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Скрытый input для загрузки файла -->
+                            <input type="file" id="resumeFile" name="resume" style="display: none"
+                                accept=".pdf,.doc,.docx,.txt,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+
+                            <!-- Отображение имени выбранного файла -->
+                            <span class="form__btn-block-fileName" id="fileName"></span>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pt-7">
+        <div class="footer-section">
+            <div class="footer-section__container container">
+                <img class="footer-logo" src="../src/assets/img/logo-footer.png" alt="">
+                <nav class="footer-section__container__info-block">
+                    <div class="footer-block">
+                        <a class="footer-block__title active" href="#">Решения</a>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link"> Бурение скважин</a></li>
+                            <li><a href="#" class="footer-list__link"> Ремонт скважин</a></li>
+                            <li><a href="#" class="footer-list__link"> Отбор керна</a></li>
+                            <li><a href="#" class="footer-list__link"> ННБ</a></li>
+                            <li><a href="#" class="footer-list__link"> Заканчивание</a></li>
+                            <li><a href="#" class="footer-list__link"> IPM (Комплексные решения)</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <a class="footer-block__title" href="#">Услуги</a>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link"> Транспортная логистика</a></li>
+                            <li><a href="#" class="footer-list__link"> Складская логистика</a></li>
+                            <li><a href="#" class="footer-list__link"> Металообработка</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <a class="footer-block__title" href="#">О компании</a>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link"> История</a></li>
+                            <li><a href="#" class="footer-list__link"> Команда</a></li>
+                            <li><a href="#" class="footer-list__link"> Производство</a></li>
+                            <li><a href="#" class="footer-list__link"> ННБ</a></li>
+                            <li><a href="#" class="footer-list__link"> Новости</a></li>
+                            <li><a href="#" class="footer-list__link"> Стандарты качества</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block footer-block_work">
+                        <a class="footer-block__title" href="#">Работа в бурсервис</a>
+
+                    </div>
+                    <div class="footer-block">
+                        <a class="footer-block__title" href="#">Контакты</a>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link"> (222) 22–22–22</a></li>
+                            <li><a href="#" class="footer-list__link"> info@info.ru</a></li>
+                            <li><a href="#" class="footer-list__link"> Отбор керна</a></li>
+                            <li><a href="#" class="footer-list__link"> Адрес</a></li>
+                        </ul>
+                        <div class="footer-block__socials">
+                            <a class="footer-block__socials__social" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.375rem" height="0.875rem"
+                                    viewBox="0 0 22 14" fill="none">
+                                    <path
+                                        d="M11.9825 14C4.46596 14 0.178638 8.74474 0 0H3.76515C3.88882 6.41842 6.66459 9.13714 8.86321 9.6977V0H12.4085V5.53553C14.5796 5.2973 16.8607 2.77477 17.6302 0H21.1755C20.8855 1.43908 20.3075 2.80165 19.4776 4.0025C18.6477 5.20335 17.5837 6.21663 16.3523 6.97898C17.7269 7.67555 18.941 8.6615 19.9145 9.87175C20.888 11.082 21.5988 12.489 22 14H18.0974C17.7373 12.6876 17.0054 11.5128 15.9934 10.6228C14.9814 9.73284 13.7343 9.16727 12.4085 8.997V14H11.9825Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <a class="footer-block__socials__social" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.1875rem" height="1.0625rem"
+                                    viewBox="0 0 19 17" fill="none">
+                                    <path
+                                        d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                                        fill="white" />
+                                </svg>
+
+                            </a>
+                            <a class="footer-block__socials__social" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.0625rem" height="0.875rem"
+                                    viewBox="0 0 17 14" fill="none">
+                                    <path
+                                        d="M11.8014 6.36077H3.51445V3.08736H11.8014C12.2855 3.08736 12.6221 3.17159 12.791 3.31866C12.9599 3.46574 13.0645 3.73853 13.0645 4.13702V5.31239C13.0645 5.73224 12.9599 6.00502 12.791 6.15211C12.6221 6.29917 12.2855 6.36205 11.8014 6.36205V6.36077ZM12.3699 0.0012518H0V14H3.51445V9.44563H9.99126L13.0645 14H17L13.6116 9.42427C14.8608 9.23947 15.4218 8.85731 15.8844 8.22752C16.347 7.59774 16.579 6.59082 16.579 5.24701V4.19737C16.579 3.40037 16.4945 2.77058 16.347 2.28788C16.1995 1.80515 15.9475 1.3853 15.5894 1.00817C15.2113 0.65117 14.7902 0.399743 14.2847 0.231297C13.7792 0.0842335 13.1477 0 12.3699 0V0.0012518Z"
+                                        fill="white" />
+                                </svg>
+                                <span class="footer-block__socials__social__ellipse"></span>
+                            </a>
+                            <a class="footer-block__socials__social" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.1875rem" height="1.0625rem"
+                                    viewBox="0 0 19 17" fill="none">
+                                    <path
+                                        d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <a class="footer-block__socials__social" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.1875rem" height="1.0625rem"
+                                    viewBox="0 0 19 17" fill="none">
+                                    <path
+                                        d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <script src="../src/scripts/libraries/swiper/swiper-bundle.min.js" defer></script>
+    <script src="../src/scripts/libraries/swiper/swiper.min.js"></script>
+    <script src="../src/scripts/libraries/jquery/jquery.min.js"></script>
+    <script src="../src/scripts/libraries/lozad/lozad.js"></script>
+    <script src="../src/scripts/libraries/fancybox-master/dist/jquery.fancybox.min.js"></script>
+    <script src="../src/scripts/libraries/fancybox-master/dist/jquery.fancybox.js"></script>
+    <script src="../src/scripts/libraries/imask/imask.min.js"></script>
+    <script type="module" src="../src/scripts/app.js"></script>
+
+</body>
+
+</html>

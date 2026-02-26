@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Bold.eot');
+    src: local('Gogh Bold'), local('Gogh-Bold'),
+        url('Gogh-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Black.eot');
+    src: local('Gogh Black'), local('Gogh-Black'),
+        url('Gogh-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh Book';
+    src: url('Gogh-Book.eot');
+    src: local('Gogh Book'), local('Gogh-Book'),
+        url('Gogh-Book.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Regular.eot');
+    src: local('Gogh Regular'), local('Gogh-Regular'),
+        url('Gogh-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Heavy.eot');
+    src: local('Gogh Heavy'), local('Gogh-Heavy'),
+        url('Gogh-Heavy.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Medium.eot');
+    src: local('Gogh Medium'), local('Gogh-Medium'),
+        url('Gogh-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-ExtraBold.eot');
+    src: local('Gogh Extra Bold'), local('Gogh-ExtraBold'),
+        url('Gogh-ExtraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh Hairline';
+    src: url('Gogh-Hairline.eot');
+    src: local('Gogh Hairline'), local('Gogh-Hairline'),
+        url('Gogh-Hairline.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Light.eot');
+    src: local('Gogh Light'), local('Gogh-Light'),
+        url('Gogh-Light.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Thin.eot');
+    src: local('Gogh Thin'), local('Gogh-Thin'),
+        url('Gogh-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+

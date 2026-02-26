@@ -1,0 +1,96 @@
+@use "../containers/media";
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    @include media.desktop {
+      font-size: .8333vw;
+    }
+    @include media.mobile {
+        font-size: 16px;
+    }
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Rosatom", sans-serif;
+    // background-color: #1f1f1f;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+main {
+    // max-width: 1921px;
+    margin: 0 auto;
+    @include media.desktop {
+        margin: 0;
+        max-width: none;
+    }
+}
+
+hr {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: "Rosatom", sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
+input {
+    background-color: transparent;
+    &:focus-visible {
+        outline: none;
+    }
+}
+.hidden {
+    display: none;
+}
+.mobile{
+    display: none !important;
+    @include media.mobile{
+        display: flex !important;
+    }
+}
+.desktop{
+    display: flex !important;
+    @include media.mobile{
+        display: none !important;
+    }
+}

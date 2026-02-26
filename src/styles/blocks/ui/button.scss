@@ -1,0 +1,274 @@
+@use "../../base/kit";
+@use "../../base/mixins";
+@use "../../containers/media";
+
+.button {
+    @include mixins.df_ac_jcc;
+    @include kit.links;
+    width: max-content;
+    gap: .62rem;
+    transition: all .3s;
+    color: kit.$white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    @include media.mobile{
+        text-align: center;
+    }
+    &_submit{
+        width: 100%;
+    }
+    &_size {
+        &_btn {
+            @include kit.links;
+            align-items: baseline;
+            padding: 0.75rem 1.5rem;
+            @include media.mobile {
+                padding: 0.9375rem 1.5rem;
+                svg{
+                    width: .75rem;
+                    height: .75rem;
+                    flex-shrink: 0;
+                }
+            }
+            &:hover {
+                color: kit.$orange;
+            }
+        }
+        &_menu{
+            @include kit.links;
+            align-items: center;
+            padding: .66rem 1.87rem;
+            svg{
+                width: .75rem;
+                height: .75rem;
+                flex-shrink: 0;
+            }
+            @include media.mobile{
+                padding: 0.625rem;
+                border-radius: 0.375rem;
+            }
+        }
+        
+    }
+    
+    &_bg{
+        &_orange{
+            background-color: kit.$orange;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            svg path {
+                stroke: kit.$white;
+            } 
+            svg,
+            svg path {
+              transition: all 0.3s ease;
+            }
+            &:hover {
+                background-color: kit.$blue;
+                border: 1px solid kit.$blue;
+                color: white;
+                svg path {
+                    stroke: kit.$orange; 
+                    
+                }
+                svg{
+                    // padding-left: .25rem;
+                    // padding-bottom: .25rem;
+                    @include media.mobile{
+                        padding: 0;
+                    }
+                }
+                
+            }
+            
+        }
+        &_transparent{
+            background-color: transparent;
+            border: 2px solid kit.$white;
+            transition: all 0.3s ease;
+            svg path {
+                stroke: kit.$white;
+            } 
+            svg,
+            svg path {
+              transition: all 0.3s ease;
+            }
+            &:hover {
+                border: 2px solid kit.$orange;
+                svg path {
+                    stroke: kit.$orange; 
+                }
+                svg{
+                    // padding-left: .25rem;
+                    // padding-bottom: .25rem;
+                    @include media.mobile{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        &_white-orange{
+            background-color: white;
+            color: #333;
+            border: 1px solid kit.$white;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: kit.$orange;
+                color: white;
+            }
+        }
+        &_white{
+            background-color: white;
+            color: #333;
+            border: 1px solid kit.$white;
+            transition: all 0.3s ease;
+            svg path {
+                stroke: kit.$blue;
+            } 
+            svg,
+            svg path {
+              transition: all 0.3s ease;
+            }
+            &:hover {
+
+                svg path {
+                    stroke: kit.$blue; 
+                }
+                svg{
+                    // padding-left: .25rem;
+                    // padding-bottom: .25rem;
+                    @include media.mobile{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        &_blue{
+            background-color: kit.$blue;
+            border: 1px solid kit.$blue;
+            transition: all 0.3s ease;
+            svg path {
+                stroke: kit.$white;
+            } 
+            svg,
+            svg path {
+              transition: all 0.3s ease;
+            }
+            &:hover {
+                background-color: kit.$orange;
+                color: kit.$white;
+                border: 1px solid kit.$orange;
+                svg path {
+                    stroke: kit.$white; 
+                }
+                svg{
+                    // padding-left: .25rem;
+                    // padding-bottom: .25rem; 
+                    @include media.mobile{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
+}
+
+
+.custom-title{
+    display: flex;
+    gap: 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    h2{
+        @include kit.heading_2;
+    }
+    @include media.mobile{
+          margin-bottom: 1.5rem;
+    }
+}
+.custom-block{
+    display: flex;
+    align-items: flex-end;
+    gap: 1.25rem;
+    @include media.mobile{
+        position: absolute;
+        bottom: 2.25rem;
+        right: 0rem;
+        flex-direction: column;
+        gap: 1.5rem; 
+        width: 100%;
+    }
+    .swiper-pagination-fraction{
+        left: 0;
+        width: fit-content;
+        color: rgba(0, 0, 0, 0.5);
+        span{
+            color: #222;
+            font-family: Rosatom;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            opacity: 1;
+        }
+        .swiper-pagination-total{
+            opacity: 0.5;
+        }
+    }
+}
+.custom-btn{
+    display: flex;
+    gap: .5rem;
+}
+.custom-slide-prev,
+.custom-slide-next{
+    display: flex;
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 0.6875rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    @include media.mobile{
+        width: 2.5rem;
+        height: 2.5rem;   
+    }
+    svg{
+        flex-shrink: 0;
+    }
+}
+.custom-slide-next.swiper-button-disabled,
+.custom-slide-prev.swiper-button-disabled{
+    opacity: 0.5;
+}
+.custom-slide-prev{
+    
+}
+.custom-block a{
+    @include kit.links;
+    @include media.mobile{
+     width: 100%;     
+    }
+
+}
+.color_blue{
+    color: #003274;
+}
+.color_white{
+    color: white;
+}
+@keyframes downloadArrow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

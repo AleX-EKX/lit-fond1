@@ -1,0 +1,354 @@
+.circle-slider {
+    margin-top: 7.5rem;
+    /* overflow: hidden; */
+}
+.circle-slider.full-screen {
+    overflow: visible;
+}
+.circle-slider__container {
+
+}
+.circle-slider__content {
+    margin-top: -18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+ 
+.circle-slider__text {
+    max-width: 28.8vw;
+    width: 100%;
+    color: var(--Black, #1F1917);
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+    text-transform: uppercase;
+}
+
+.circle-slider__el {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 95rem;
+    width: 100%;
+    padding: 4rem;
+    gap: 5rem; /* Немного уменьшим отступ */
+}
+
+.circle-slider__el:before {
+    content: '';
+    position: absolute;
+    height: 120%;
+    width: 25rem;
+    left: 99%;
+    top: -10%;
+    background-color: #fff;
+    z-index: 3;
+}
+
+/* --- ЛЕВАЯ ЧАСТЬ: АРКА С ЭЛЕМЕНТАМИ --- */
+.circle-slider__visuals {
+    flex: 0 0 32rem;
+    height: 50rem;
+    position: relative;
+    display: flex;
+    /* Смещаем центр вращения влево, чтобы активный элемент был слева */
+    justify-content: flex-start; 
+    align-items: center;
+
+}
+        
+/* Статичная изогнутая линия, подогнанная под арку */
+.circle-slider__visuals::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50rem;
+    height: 50rem;
+    transform: translateY(-50%)  translateX(1rem);
+    border-left: 0.2rem solid #ccc;
+    border-radius: 100%;
+    z-index: 0;
+}
+
+/* Контейнер, который будет вращаться */
+.circle-slider__wheel {
+    position: absolute;
+    width: 50rem; 
+    height: 50rem;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Каждый элемент на колесе */
+.circle-slider__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center; 
+    z-index: 5;
+}
+        
+.image-container, .circle-slider__item span {
+    /* Плавное контр-вращение, чтобы картинки были вертикальными */
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        
+.circle-slider__item img {
+    width: 2.93413rem;
+    height: 2.93413rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+    box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: width 0.8s ease, height 0.8s ease, border-width 0.8s ease;
+}
+
+.circle-slider__item span {
+    display: block;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    color: var(--Black, #1F1917);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 1.625rem */
+    opacity: 1;
+    transition: opacity 0.6s;
+    text-align: center;
+}
+        
+/* Стили для активного (центрального на дуге) элемента */
+.circle-slider__item.active {
+    z-index: 10;
+}
+.circle-slider__item.active img {
+    width: 14.59719rem;
+    height: 14.59719rem;
+    border-width: 1rem;
+    border: 4px solid #D9D9D9;
+}
+.circle-slider__item.active span {
+    opacity: 0;
+}
+
+/* Индикатор загрузки */
+.progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    visibility: hidden;
+    width: calc(14.59719rem + 10px);
+    height: calc(14.59719rem + 10px);
+}
+        
+.progress-ring__circle {
+     /* 2 * PI * R = 2 * 3.14159 * 115 ≈ 723 */
+    stroke-dasharray: 723; 
+    stroke-dashoffset: 723;
+}
+
+.circle-slider__item.active .progress-ring {
+    visibility: visible;
+}
+
+.circle-slider__item.active .progress-ring__circle {
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    from { stroke-dashoffset: 723; }
+    to { stroke-dashoffset: 0; }
+}
+
+/* --- ПРАВАЯ ЧАСТЬ: ТЕКСТ --- */
+.circle-slider__content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 11rem;
+    width: 75%;
+    height: fit-content;
+    z-index: 5;
+}
+        
+.content-item {
+    position: absolute;
+    top: 0;
+    left: 3rem; /* Синхронизируем с padding */
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    transform: translate(0, -50%);
+}
+        
+.content-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.year-title {
+    margin-bottom: 0.88rem;
+    color: var(--Black, #1F1917);
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.description {
+    color: var(--Black, #1F1917);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 1.625rem */
+}
+.full-screen  .circle-slider__content {
+    margin-top: -5rem;
+}
+.full-screen .circle-slider__body {
+    transform: translateX(-40rem);
+}
+
+.full-screen .circle-slider__content-wrapper {
+    width: 45rem;
+    left: 20rem;
+}
+
+@media (max-width: 768px) {
+    .full-screen .circle-slider__body {
+        transform: unset;
+    }
+    .circle-slider {
+        margin-top: 3rem;
+        overflow: hidden;
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+    }
+    .circle-slider .mirror-title {
+        padding-left: 3.12rem;
+    }
+    .circle-slider .mirror-title::before {
+        width: 3.375rem
+    }
+    .full-screen  .circle-slider__content,
+    .circle-slider__content {
+        margin-top: 0;
+        flex-direction: column;
+        gap: 0;
+    }
+    .circle-slider__text {
+        margin-top: 1.5rem;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.125rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .circle-slider__el {
+        flex-direction: column;
+        padding: 0;
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    .circle-slider__el:before,
+    .circle-slider__visuals::before {
+        display: none;
+    }
+
+
+    /* Контейнер для круга */
+    .circle-slider__visuals {
+        margin-top: 3rem;
+        flex: none; 
+        width: 100vw; 
+        /* width: 100%; */
+        height: fit-content;
+        min-height: 35rem;
+        justify-content: center;
+    }
+    
+
+    .circle-slider__wheel {
+        margin-top: -35%;
+        width: 10rem;
+        height: 10rem;
+        border-radius: unset;
+        border: none;
+    }
+
+    /* Уменьшаем размеры картинок */
+    .circle-slider__item img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .circle-slider__item.active img {
+        width: 7.14113rem;
+        height: 7.14113rem;
+        border-width: 2px;
+    }
+    /* Год под неактивными элементами не нужен */
+    .circle-slider__item span {
+        opacity: 0;
+    }
+
+    .progress-ring {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    /* Контейнер для текстового контента */
+    .full-screen .circle-slider__content-wrapper,
+    .circle-slider__content-wrapper {
+        margin-top: -25rem;
+        position: relative;
+        top: unset;
+        left: unset;
+        width: 100%;
+        padding: 0 ;
+        height: auto;
+        text-align: center;
+    }
+    .circle-slider__content-wrapper::before{
+        content: '';
+        background-color: #fff;
+        bottom: -4rem;
+        width: 100%;
+        height: 10rem;
+        left: 0;
+    }
+    .content-item {
+        position: relative; 
+        transform: none !important;
+        left: 0;
+        top: 0;
+    }
+    
+    /* Показываем только активный текстовый блок */
+    .content-item:not(.active) {
+        display: none;
+    }
+
+    .year-title {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 1rem;
+        /* max-width: 65%;
+        text-align: center;
+        margin: 0 auto; */
+        padding: 0 1rem;
+    }
+}

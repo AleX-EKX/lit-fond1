@@ -1,0 +1,17 @@
+@use 'variables';
+
+@mixin desktop() {
+    @media (max-width: variables.$breakpoint_desktop){
+        @content
+    }
+};
+@mixin mobile() {
+    @media (max-width: variables.$breakpoint_mobile){
+        @content
+    }
+};
+@mixin mobile_small() {
+    @media (max-width: variables.$breakpoint_mobile_lite){
+        @content
+    }
+};

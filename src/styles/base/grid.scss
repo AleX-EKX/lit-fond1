@@ -1,0 +1,26 @@
+@use "../containers/media";
+
+.container{
+  margin: 0 15rem;
+  @include media.mobile {
+    margin: 0 1.25rem;
+  }
+}
+.container-v2{
+margin: 0 auto;
+position: relative;
+padding: 0 10px;
+width: 100%;
+max-width: 1300px;
+overflow: inherit;
+@include media.mobile {
+  margin: 0 1rem;
+}
+}
+.full-width{
+  width: 100vw;
+  margin-left: -16.25rem;
+  @include media.mobile{
+    margin-left: -1rem;
+  }
+}

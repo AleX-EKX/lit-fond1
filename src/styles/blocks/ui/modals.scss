@@ -1,0 +1,314 @@
+@use "../../base/kit";
+@use "../../base/mixins";
+@use "../../containers/media";
+
+.modal[data-modal-state="close"] {
+    scale: 0;
+    opacity: 0;
+}
+.modal[data-modal-state="open"] {
+    scale: 1;
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    transition: all .3s;
+    &[data-modal-state="open"] .modal-inset {
+        position: absolute;
+        inset: 0;
+        // Замените значение внутри rgba() на подходящие для вас
+        background-color: rgba(#0D0D0D, $alpha: .4);
+        transition: all .3s;
+    }
+    &[data-modal-state="open"] .modal-content {
+        scale: 1;
+        opacity: 1;
+    }
+    &[data-modal-state="close"] .modal-content {
+        scale: 0;
+        opacity: 0;
+    }
+}
+
+.modal-form{
+    &[data-modal-state="open"] .modal-inset {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(11, 11, 11, 0.20);
+        backdrop-filter: blur(10px);
+    }
+
+    .modal-header {
+        
+    }
+    .modal-body {
+        .form-section__container{
+            position: relative;
+            .btn-modal-close {
+                position: absolute;
+                right: 1.25rem;
+                top: 1.25rem;
+                z-index: 3;
+                @include media.mobile{
+                    svg{
+                        width: 2.1875rem;
+                        height: 2.1875rem;
+                        aspect-ratio: 1/1;
+                        right: -0.5625rem;
+                        top: -0.5625rem;
+                    }
+                }
+            }
+            &__top-title{
+                @include media.mobile{
+                    max-width: 90%;
+                }
+            }
+        }
+        
+    }
+    
+}
+.modal-case{
+    
+    &[data-modal-state="open"] .modal-inset {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(11, 11, 11, 0.20);
+        backdrop-filter: blur(10px);
+    }
+    .modal-content{
+      
+        max-width: 87.5rem;
+        @include media.mobile{
+            height: -webkit-fill-available;
+        }
+        width: 100%;
+        .modal-header{
+            position: relative;
+            .btn-modal-close{
+                position: absolute;
+                top: 0rem;
+                right: 0rem;
+                svg{
+                    path{
+                        stroke: kit.$black
+                    }
+                }
+                @include media.mobile{
+                    svg{
+                        width: 2.1875rem;
+                        height: 2.1875rem;
+                        aspect-ratio: 1/1;
+                        right: -0.5625rem;
+                        top: -0.5625rem;
+                    }
+                }
+            }
+        }
+        .modal-body{
+            @include mixins.df_fdc;
+           
+            &__case-block{
+                display: flex;
+                gap: 1.25rem;
+                padding: 2.5rem;
+                background-color: #F4F4F4;
+                @include media.mobile{
+                    flex-direction: column;
+                    padding: 1rem;
+                    gap: 1.5rem;
+                }
+                .left-block{
+                    @include mixins.df_fdc;
+                    gap: .75rem;
+                    max-width: 28.875rem;
+                    @include media.mobile{
+                        gap: 1.5rem;
+                    };
+                    &-title{
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        line-height: normal;
+                        text-transform: uppercase;
+                        color: kit.$black;
+                        @include media.mobile{
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            line-height: 130%;
+                        }
+                    }
+                    &__info-block{
+                        @include mixins.df_fdc;
+                        &-item{
+                            padding: 1.25rem 1.5rem;
+                            border: 1px solid #D2D1D1;
+                            position: relative;
+                            @include mixins.df_fdc;
+                            gap: 1.25rem;
+                            @include media.mobile{
+                                padding: .75rem;
+                                padding-right: 2.5rem;
+                                gap: .75rem;
+                            }
+                            .desc{
+                                @include kit.desc;
+                                color: kit.$black;
+                                max-width: 90%;
+                                @include media.mobile{
+                                    max-width: 100%;
+                                }
+                            }
+                            .text{
+                                opacity: .5;
+                                @include kit.desc;
+                                color: kit.$black;
+                                @include media.mobile{
+                                    font-size: .75rem;
+                                }
+                            }
+                            svg{
+                                position: absolute;
+                                right: 0.75rem;
+                                top: 0.75rem;
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                flex-shrink: 0;
+                                
+                            }
+                        }
+                    }
+                }
+                .right-block{
+                    .card-block__picture{
+                        
+                    }
+                }
+
+            }
+            &__bottom{
+                padding: 1.5rem 3.75rem;
+                padding-bottom: 3.35rem;
+                background-color: kit.$green;
+                @include media.mobile{
+                    padding: 1.38rem 3.12rem;
+                    padding-bottom: 2.5rem;
+                }
+                .mirror-title__text_v2{
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    color: white;
+                }
+                .mirror-title{
+                    @include media.mobile{
+                        padding-left: 0;
+                    }
+                }
+                .mirror-title::before{
+                    width: 3.25rem;
+                    height: 0.875rem;
+                    left: -3.75rem;
+                    top: 0rem;
+                    @include media.mobile{
+                        width: 2.375rem;
+                        height: 1.5rem;
+                    }
+                }
+                &__info{
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    justify-content: space-between;
+                    @include media.mobile{
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    &-item{
+                        @include mixins.df_fdc;
+                        .big-text{
+                            font-size: 4rem;
+                            font-weight: 600;
+                            line-height: 130%;
+                            text-transform: uppercase;
+                            color: kit.$white;
+                            @include media.mobile{
+                                font-size: 2rem;
+                            }
+                        }
+                        .desc{
+                            @include kit.desc;
+                            color: kit.$white;
+                            @include media.mobile{
+                                font-size: .75rem;
+                            }
+                        }
+                        .text{
+                            @include kit.text_1;
+                            color: kit.$white;
+                            max-width: 23.6875rem;
+                            span{
+                                font-weight: 700;
+                            }
+                            @include media.mobile{
+                                font-size: 0.75rem;
+                                line-height: 140%;
+                                span{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                    .border{
+                        width: 0.125rem;
+                        // height: 6.25rem;
+                        flex-shrink: 0;
+                        background-color: #fff;
+                        height: -webkit-fill-available;
+                        @include media.mobile{
+                            width: -webkit-fill-available;
+                            height: 0.0625rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+}
+
+// Общие стили для всех модальных окон
+
+.modal-content {
+    transition: all 0.3s cubic-bezier(.34,1.02,.38,1);
+    position: relative;
+    width: 100%;
+    .modal-header {
+        .btn-modal-close {
+
+        }
+    }
+    .modal-body {
+
+    }
+
+}
+.popup {
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.open-modal{
+    cursor: pointer;
+}

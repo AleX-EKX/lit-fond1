@@ -1,0 +1,42 @@
+@use "../../base/kit";
+@use "../../base/mixins";
+@use "../../containers/media";
+
+.breadcrumbs {
+    @include mixins.df_ac;
+    gap: 0.25rem;
+    margin: 1.25rem 0;
+    width: fit-content;
+    @include media.mobile{
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+    &__link {
+        @include kit.breadcrumbs;
+        color: #222;
+        opacity: .5;
+        &:last-child {
+           opacity: 1;
+        }
+    }
+
+    &__separator {
+        display: inline-block;
+        // margin: 0 0.5rem;
+        font-size: 1rem;
+        line-height: 1;
+        color: #1F1917;
+        opacity: 0.5;
+        &::before {
+            content: "/";
+        }
+        @include media.mobile {
+            font-size: 0.875rem;
+        }
+        
+        &--last {
+            // color: #E87817;
+        }
+    }
+}
+

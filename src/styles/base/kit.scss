@@ -1,0 +1,228 @@
+@use "../containers/media";
+
+$black: #1F1917;
+$white: #FFFFFF;
+$brown: #1F1917;
+$blue: #003274;
+$orange: #DF752C;
+$green: #004230;
+$l-green: #00835F1A;
+$light-green: #0042301A;
+$gray: #E9E8E8;
+$l-gray: #E4E8ED;
+$l-orange:#E878171A;
+$dark-blue: #003274;
+@mixin heading_1{
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 115%;
+    letter-spacing: -0.03em;
+    @include media.mobile {
+        font-size: 2rem;
+    }
+
+}
+@mixin heading_2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    @include media.mobile {
+        font-size: 1.75rem;
+        line-height: 110%;
+    }
+}
+@mixin heading_3{
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    @include media.mobile {
+        font-size: 1.125rem;
+    }
+}
+@mixin heading_4_bold{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 1.125rem;
+    }
+}
+@mixin heading_4{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 1.125rem;
+    }
+}
+@mixin cards{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 130%; 
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 1.125rem;
+    }
+}
+
+@mixin text_1{
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 1rem;
+        line-height: 130%
+    }
+}
+@mixin text_1_bold{
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 1rem;
+        line-height: 130%
+    }
+}
+@mixin body{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 0.875rem;
+    }
+}
+@mixin body_bold{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 0.875rem;
+    }
+}
+
+@mixin body_point{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 0.875rem;
+    }
+}
+@mixin links{
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+
+}
+@mixin desc {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    @include media.mobile {
+        font-size: 0.75rem;
+        line-height: 120%;
+    }
+}
+
+
+@mixin breadcrumbs{
+
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.1375rem;
+    @include media.mobile{
+        font-size: .75rem;
+        font-weight: 400;
+        line-height: 120%;
+    }
+}
+// @mixin description{
+//     font-size: .75rem;
+//     font-weight: 600;
+//     line-height: 130%;
+//     letter-spacing: -0.01em;
+// }
+
+.pt-7 {
+    padding-top: 7.5rem;
+    @include media.mobile{
+        padding-top: 5rem;
+    }
+}
+.pt-7-3 {
+    padding-top: 7.5rem;
+    @include media.mobile{
+        padding-top: 3rem;
+    }
+}
+.pt-5{
+    padding-top: 5rem;
+    @include media.mobile{
+        padding-top: 2.5rem;
+    }
+}
+.mt-5{
+    margin-top: 5rem;
+    @include media.mobile{
+        margin-top: 2.5rem;
+    }
+}
+.pt-4 {
+    padding-top: 4rem;
+}
+.pt-3 {
+    padding-top: 3.75rem;
+    @include media.mobile{
+        padding-top: 1.5rem;
+    }
+}
+.pt-2 {
+    padding-top: 2.75rem;
+    @include media.mobile{
+        padding-top: 2.5rem;
+    }
+}
+.pt-1 {
+    padding-top: 1.25rem;
+}
+.pb-11-mob{
+    @include media.mobile{
+        padding-bottom: 11.75rem;
+    } 
+}
+.pb-8-mob{
+    @include media.mobile{
+        padding-bottom: 8.75rem;
+        .custom-block{
+            bottom: .25rem;
+        }
+    } 
+}
+.no-scroll {
+    overflow: hidden;
+  }
+  .img-block{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+.h2{
+    @include heading_2;
+}
+button:focus-visible{
+    outline: none;
+}

@@ -1,0 +1,266 @@
+@use "../../base/kit";
+@use "../../base/mixins";
+@use "../../containers/media";
+
+.blue-fon{
+    position: relative;
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+    &::before{
+        content: "";
+        background: linear-gradient(282deg, #15256D 0%, #4495D1 99.25%);
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: 0%;
+        margin-left: -15rem;
+        z-index: -1;
+    }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(/src/assets/img/polosa-banner.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: -1;
+    }
+    @include media.mobile{
+        &::before{
+            margin-left: -1.25rem;
+        }
+        &::after{
+            background-image: url(/src/assets/img/polosa-banner-mob.png);
+        }
+    }
+    .breadcrumbs *{
+        color: white;
+    }
+    .banner-section{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.2rem;
+        @include media.mobile{
+            flex-direction: column;
+        }
+        h2{
+            @include kit.heading_2;
+            color: white;
+        }
+        .banner-section-info{
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            max-width: 38.375rem;
+            width: 100%;
+            margin-right: 22rem;
+            span{
+                @include kit.text_1;
+                color: white;
+                @include media.mobile{
+                    @include kit.text_1_bold;
+                }
+            }
+            p{
+                color: #FFF;
+                font-family: Rosatom;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 1.4rem */  
+                opacity: 0.8;
+                @include media.mobile{
+                    font-size: .875rem;
+                }
+            }
+        }
+    }
+}
+
+.anchors-block{
+    border-radius: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    overflow: auto;
+    margin-top: 1.25rem;
+    width: fit-content;
+    @include media.mobile{
+        width: 107%;
+        border-radius: .5rem;
+        margin-top: 1.5rem;
+    }
+    a {
+        position: relative;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        color: #222;
+        font-family: Rosatom;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        background: #F5F5F5;
+        white-space: nowrap;
+        @include media.mobile{
+            font-size: .875rem;
+            padding: .62rem 1rem;
+            background: none;
+            border-radius: 0.25rem;
+
+        }
+        &:hover {
+            background: var(--Blue-Light, #6CACE4);
+            color: white;
+        }
+        
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute; /* Меняем на absolute для точного позиционирования */
+            right: -.72rem; /* Сдвигаем вправо, чтобы линия была между элементами */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 2.938rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='47' viewBox='0 0 1 47' fill='none'%3E%3Cpath d='M0.5 0.5V46.5' stroke='black' stroke-opacity='0.15' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
+
+.services-block{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    h2{
+        @include kit.heading_2;
+        color: #222;
+    }
+    .button{
+        margin-top: .5rem;
+    }
+    @include media.mobile{
+        padding-top: 2.5rem;
+        padding-bottom: 1.3rem;
+        .button{
+            margin-top: 0;
+            width: 100%;
+        }
+    }
+}
+
+.material-block{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    h3{
+        @include kit.heading_3;
+        color: #333;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        gap: .75rem;
+        border-radius: 1rem;
+        background: linear-gradient(98deg, #DF752C 1.09%, #F2B890 102.16%);
+        padding: 1rem 2.5rem 1rem 1rem;
+        @include media.mobile{
+            flex-direction: column;
+            background: none;
+            padding: 0;
+        }
+        .material-block-left{
+            display: flex;
+            gap: 1.25rem;
+            @include media.mobile{
+                gap: .75rem;
+                background: linear-gradient(98deg, #DF752C 1.09%, #F2B890 102.16%);
+                padding: .5rem;
+                border-radius: 0.75rem;
+                width: 100%;
+            }
+            .material-block-img{
+                position: relative;
+                width: 100%;
+                padding-bottom: 29%;
+                max-width: 8.75rem;
+                border-radius: 0.5rem;
+                background-color: white;
+                @include media.mobile{
+                    padding-bottom: 32%;
+                    max-width: 13.25rem;
+                }
+                @media (max-width:500px) {
+                    max-width: 6.25rem;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 0.5rem;
+                }
+            }
+            .material-block-name{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h4{
+                    @include kit.heading_4_bold;
+                    color: white;
+                    @include media.mobile{
+                        font-size: 0.875rem;
+                        font-weight: 700;
+                        line-height: 120%;
+                    }
+                }
+                .staj{
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    color: var(--white, rgba(255, 255, 255, 0.801));
+                    @include kit.text_1;
+                    @include media.mobile{
+                        font-size: 0.875rem;
+                    }
+                }
+                span{
+                    color: white;
+                }
+            }
+        }
+        .material-block-btn{
+            display: flex;
+            flex-direction: column;
+            gap: .62rem;
+            @include media.mobile{
+                width: 100%;
+            }
+            .button{
+                width: 100%;
+            }
+            .button_bg_white{
+                color: #003274;
+                font-weight: 500;
+                @include media.mobile{
+                    border: 1px solid #003274;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@use "../../base/kit";
+@use "../../base/mixins";
+@use "../../containers/media";
+
+.custom-balloon {
+    font-size: .875rem;
+    line-height: 1.4;
+    padding: 10px;
+    max-width: 220px;
+  }
+
+  .custom-balloon h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .custom-balloon p {
+    margin: 4px 0;
+  }
+
+  #balloon-template {
+    display: none;
+  }
+
+  .geography-section{
+    &__container{
+      @include mixins.df_fdc;
+      gap: 1.25rem;
+      .map-block{
+        @include mixins.df_fdc;
+        gap: 2.5rem;
+        &__info{
+          display: flex;
+          align-items: flex-start;
+          gap: 4rem;
+          justify-content: space-between;
+          @include media.mobile{
+            flex-direction: column;
+            gap: 1.25rem;
+          }
+          &-title{
+            color: kit.$black;
+            @include kit.text_1;
+            width: 100%;
+          }
+          .city-filters{
+            width: 100%;
+            @include mixins.df_ac;
+            gap: .56rem;
+            flex-wrap: wrap;
+            button{
+              padding: .19rem 1.25rem;
+              border-radius: 0.5rem;
+              border: 1px solid #C4C4C4;
+              color: kit.$black;
+              @include kit.text_1-bold;
+              font-weight: 400 !important;
+              transition: all 0.3s;
+              &:hover{
+                background: #e0e0e0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #map {
+    width: 100%;
+    height: 30.8125rem;
+  }

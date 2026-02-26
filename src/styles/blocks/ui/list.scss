@@ -1,0 +1,101 @@
+@use "../../base/kit";
+@use "../../base/mixins";
+@use "../../containers/media";
+
+.list {
+    position: relative;
+    @include mixins.df_fdc;
+    gap: .75rem;
+    &_default{
+        list-style: none; 
+        padding-left: 0;
+        li {
+            position: relative;
+            padding-left: 1.75rem; 
+            @include kit.body;
+            &::before {
+              content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1rem' height='0.688rem' viewBox='0 0 16 11' fill='none'><path d='M9.67578 0.00488239L9.67578 -4.22942e-07L9.68066 0.00488239L9.68555 0.00488239L9.68555 0.00781208L16 5.31543L9.68555 10.6182L9.68555 10.626L0 10.626L-4.64263e-07 0.00488281L9.67578 0.00488239Z' fill='%23E77817'/></svg>");
+              position: absolute;
+              left: 0;
+              top: 0rem;
+            }
+          }
+    }
+    &_sticky {
+      list-style: none; 
+      padding-left: 0;
+      
+      li {
+        position: relative;
+        @include kit.body;
+        transition: padding-left 0.3s ease;
+        text-transform: uppercase;
+        a{
+          color: kit.$black;
+        }
+        
+        &::before {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.25rem' height='.875rem' viewBox='0 0 20 14' fill='none'%3E%3Cpath d='M12.0947 0.00585885L12.0947 -5.28677e-07L12.1006 0.00585885L12.1074 0.00585885L12.1074 0.0107417L20 6.81641L12.1074 13.6162L12.1074 13.627L0 13.627L-5.95395e-07 0.00585938L12.0947 0.00585885Z' fill='%23E77817'/%3E%3C/svg%3E");
+          position: absolute;
+          left: 0;
+          top: 0rem;
+          opacity: 0;
+          transform: translateX(-10px);
+          transition: all 0.3s ease;
+        }
+    
+        &:hover {
+          padding-left: 2rem;
+          a{
+            color: kit.$orange;
+          }
+          
+          &::before {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+    
+        // Для активного класса
+        &.active {
+          padding-left: 2rem;
+          a{
+            color: kit.$orange;
+          }
+          &::before {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+   
+    &_service{
+      list-style: none; 
+        padding-left: 2rem;
+        gap: 1.25rem;
+        @include media.mobile{
+          padding-left: 0;
+          gap: .88rem;
+        }
+        li {
+          position: relative;
+          padding-left: 1.75rem; 
+          @include kit.text_1_bold;
+          font-weight: 400;
+          text-transform: uppercase;
+          @include media.mobile{
+            padding-left: 1.25rem;
+          }
+          &::before {
+            content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1rem' height='0.688rem' viewBox='0 0 16 11' fill='none'><path d='M9.67578 0.00488239L9.67578 -4.22942e-07L9.68066 0.00488239L9.68555 0.00488239L9.68555 0.00781208L16 5.31543L9.68555 10.6182L9.68555 10.626L0 10.626L-4.64263e-07 0.00488281L9.67578 0.00488239Z' fill='%23E77817'/></svg>");
+            position: absolute;
+            left: 0;
+            top: 0rem;
+            @include media.mobile{
+              left: -.88rem;
+            }
+          }
+        }
+    }
+}
